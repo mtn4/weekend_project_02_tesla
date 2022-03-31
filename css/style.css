@@ -136,6 +136,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: white;
@@ -143,10 +144,12 @@ body {
   /* color: #333; */
   /* line-height: 1.6; */
 }
-header {
+#first-page {
   background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop)
     no-repeat center center/cover;
   height: 100vh;
+  width: 100%;
+  /* border: 5px solid black; */
 }
 
 ul {
@@ -162,7 +165,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   height: 56px;
-  position: sticky;
+  position: fixed;
   top: 0px;
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -196,17 +199,26 @@ ul.main {
 }
 
 ul a {
-  transition: all 0.1s ease-in;
+  transition: all 0.1s;
   padding: 8px 10px;
 }
 ul a:hover {
   background-color: rgba(130, 130, 140, 0.5);
   border: 1px solid transparent;
-  border-radius: 25%;
+  border-radius: 30%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  gap: 69.5vh;
+  color: white;
 }
 .model {
-  margin-top: 150px;
-  text-align: center;
+  margin: 0;
+  padding-top: 16vh;
   color: #fff;
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -215,4 +227,116 @@ ul a:hover {
   font-weight: 500;
   line-height: 48px;
   letter-spacing: -0.6px;
+}
+#lower-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.info__heading {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 300px;
+  letter-spacing: 0;
+}
+.captions__text {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 7px;
+  letter-spacing: 0;
+}
+.info__heading--small {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.order-btn__link {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  border: 3px solid white;
+  padding: 9px 56px;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.order-btn__link:hover {
+  background-color: white;
+  color: black;
+}
+
+.dial {
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.dial__outer-circle,
+.dial__inner-circle-wrapper,
+.dial__inner-circle,
+.dial__needle {
+  fill: #fff;
+  margin-right: 4px;
+  height: 25px;
+  margin-inline-end: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 30px;
+}
+.dial__outer-circle {
+  width: 41px;
+  right: 6px;
+  top: -6px;
+}
+
+.dial__inner-circle-wrapper {
+  height: 30px;
+  width: 60px;
+  opacity: 0.2;
+  top: -13px;
+  right: 11px;
+}
+
+.dial__needle {
+  width: 4px;
+  transform: rotate(90deg);
+  top: 5px;
+  right: 16px;
+}
+
+.chat-btn {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  border-radius: 27px;
+  box-shadow: 0 0.5px 3px #333;
+  position: fixed;
+  bottom: 80px;
+  right: 34px;
+  background: #fff;
+}
+.chat-btn__icon {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.chat-btn__icon svg {
+  position: relative;
+  top: 11px;
 }
