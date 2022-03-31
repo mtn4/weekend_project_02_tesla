@@ -211,13 +211,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: center;
-  gap: 69.5vh;
   color: white;
+  height: 100%;
 }
 .model {
   margin: 0;
+  padding: 0;
   padding-top: 16vh;
   color: #fff;
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
@@ -232,7 +233,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  padding-left: 65px;
+  gap: 93.5px;
+  padding-bottom: 82px;
+  padding-right: 22px;
 }
 .info__heading {
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
@@ -241,8 +245,10 @@ main {
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
-  margin-bottom: 300px;
-  letter-spacing: 0;
+  letter-spacing: -0.5px;
+}
+.seconds {
+  letter-spacing: 5px;
 }
 .captions__text {
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
@@ -251,7 +257,7 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-top: 7px;
+  padding-top: 8px;
   letter-spacing: 0;
 }
 .info__heading--small {
@@ -262,6 +268,10 @@ main {
   font-weight: 500;
   line-height: 24px;
 }
+.order-btn {
+  margin-bottom: 16px;
+  margin-left: -19px;
+}
 .order-btn__link {
   font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -270,7 +280,7 @@ main {
   font-weight: 500;
   line-height: 14px;
   border: 3px solid white;
-  padding: 9px 56px;
+  padding: 9.5px 56px;
   border-radius: 30px;
   transition: all 0.5s;
 }
@@ -290,9 +300,7 @@ main {
 .dial__inner-circle,
 .dial__needle {
   fill: #fff;
-  margin-right: 4px;
   height: 25px;
-  margin-inline-end: 4px;
   overflow: hidden;
   position: absolute;
   top: 10px;
@@ -339,4 +347,21 @@ main {
 .chat-btn__icon svg {
   position: relative;
   top: 11px;
+}
+.dial {
+  padding-left: 30px;
+  margin-top: 7px;
+}
+.speedometer {
+  margin-right: -25px;
+}
+.seconds-s {
+  padding-left: 2px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.captions__text.caption-speed {
+  padding-right: 30px;
 }
