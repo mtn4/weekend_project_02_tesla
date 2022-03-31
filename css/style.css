@@ -173,7 +173,7 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 32px;
+  gap: 12px;
 }
 
 .nav__logo {
@@ -188,15 +188,21 @@ nav ul {
 }
 
 ul.main {
-  margin-left: 83px;
+  margin-left: 93px;
 }
 
 .side {
-  padding-right: 48px;
+  padding-right: 38px;
 }
 
+ul a {
+  transition: all 0.1s ease-in;
+  padding: 8px 10px;
+}
 ul a:hover {
-  background-color: gray;
+  background-color: rgba(130, 130, 140, 0.5);
+  border: 1px solid transparent;
+  border-radius: 25%;
 }
 .model {
   margin-top: 150px;
