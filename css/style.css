@@ -1,0 +1,212 @@
+@font-face {
+  font-display: swap;
+  font-family: Gotham Bold;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Bold_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham Medium;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham Book;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Book_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham Light;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham Extra Light;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-XLight_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Bold_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: PingFang SC;
+  font-weight: 500;
+  src: local("PingFang SC Semibold");
+}
+@font-face {
+  font-family: PingFang TC;
+  font-weight: 500;
+  src: local("PingFang TC Semibold");
+}
+@font-face {
+  font-family: PingFang HK;
+  font-weight: 500;
+  src: local("PingFang HK Semibold");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Book_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: PingFang SC;
+  font-weight: 400;
+  src: local("PingFang SC Regular");
+}
+@font-face {
+  font-family: PingFang TC;
+  font-weight: 400;
+  src: local("PingFang TC Regular");
+}
+@font-face {
+  font-family: PingFang HK;
+  font-weight: 400;
+  src: local("PingFang HK Regular");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-XLight_Web.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: Noto Sans Arabic;
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/notosansarabic/v10/nwpCtLGrOAZMl5nJ_wfgRg3DrWFZWsnVBJ_sS6tlqHHFlj4wv4rqxzLI.woff2)
+    format("woff2");
+  unicode-range: U+06??, U+200c-200e, U+2010-2011, U+204f, U+2e41, U+fb50-fdff,
+    U+fe80-fefc, U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
+    U+02dc, U+2000-206f, U+2074, U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+feff, U+fffd;
+}
+@font-face {
+  font-family: Noto Sans Arabic;
+  font-stretch: 100%;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/notosansarabic/v10/nwpCtLGrOAZMl5nJ_wfgRg3DrWFZWsnVBJ_sS6tlqHHFlj4wv4rqxzLI.woff2)
+    format("woff2");
+  unicode-range: U+06??, U+200c-200e, U+2010-2011, U+204f, U+2e41, U+fb50-fdff,
+    U+fe80-fefc, U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
+    U+02dc, U+2000-206f, U+2074, U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+feff, U+fffd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* color: #333; */
+  /* line-height: 1.6; */
+}
+header {
+  background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop)
+    no-repeat center center/cover;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  position: sticky;
+  top: 0px;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+nav ul {
+  display: flex;
+  gap: 32px;
+}
+
+.nav__logo {
+  padding-top: 2.8px;
+  padding-left: 48px;
+}
+.logo-link__svg {
+  height: 12.3px;
+}
+.logo-link__svg--light {
+  fill: #fff;
+}
+
+ul.main {
+  margin-left: 83px;
+}
+
+.side {
+  padding-right: 48px;
+}
+
+ul a:hover {
+  background-color: gray;
+}
+.model {
+  margin-top: 150px;
+  text-align: center;
+  color: #fff;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.6px;
+}
