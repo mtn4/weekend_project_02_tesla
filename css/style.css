@@ -216,12 +216,12 @@ ul.main {
 }
 
 ul a {
+  border-radius: 25%;
   transition: all 0.5s ease-in-out;
   padding: 8px 10px;
 }
 ul a:hover {
   background-color: rgba(130, 130, 140, 0.5);
-  border-radius: 25%;
 }
 main {
   display: flex;
@@ -382,9 +382,13 @@ main {
   padding-right: 30px;
 }
 .side-menu {
-  float: left;
+  display: flex;
   position: absolute;
-  top: 40.3vh;
+  top: 0;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 }
 
@@ -531,12 +535,17 @@ main {
   justify-content: space-between;
 }
 .second-page .left-panel {
-  background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/ea753653-02a2-4206-aac5-82a33a0a245d/bvlatuR/std/2880x1800/model-3-hero-a-desktop)
-    no-repeat center center/cover;
-  background-size: 81.5vw 88vh;
+  background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/ea753653-02a2-4206-aac5-82a33a0a245d/bvlatuR/std/2880x1800/model-3-hero-a-desktop);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* background-size: 81.5vw 88vh; */
   /* width: calc(100% - 416px); */
+  /* overflow: hidden; */
   flex-grow: 1;
+  /* margin-top: 5.8vh; */
 }
+
 .right-panel .safety-text {
   margin: 0 40px;
   padding-top: 48px;
@@ -662,12 +671,13 @@ main {
   padding: 30px;
 }
 .side-menu-second {
-  float: left;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  /* top: 0; */
   left: 0;
-  /* height: 500px; */
-  top: 40.3vh;
   z-index: 10;
 }
 #third-page {
@@ -824,11 +834,8 @@ main {
   padding-left: 5px;
 }
 .side-menu-third {
-  float: left;
   position: absolute;
-  /* top: 0; */
   left: 0;
-  /* height: 500px; */
   top: 40.3vh;
   z-index: 10;
 }
@@ -859,5 +866,26 @@ main {
   100% {
     opacity: 1;
     padding-bottom: 82px;
+  }
+}
+
+@media (max-width: 1199px) {
+  nav {
+    visibility: hidden;
+  }
+  .menu-button {
+    visibility: visible;
+    background-color: rgba(130, 130, 140, 0.5);
+    border-radius: 25%;
+  }
+  .nav__item--left {
+    visibility: visible;
+  }
+  .nav__logo {
+    /* padding-top: 2.8px; */
+    padding-left: 36px;
+  }
+  .side {
+    padding-right: 20px;
   }
 }
