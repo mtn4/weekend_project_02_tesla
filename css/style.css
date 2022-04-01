@@ -138,18 +138,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  scroll-snap-type: y mandatory;
+  -webkit-font-smoothing: antialiased;
+}
+main .page {
+  scroll-snap-align: start;
+}
+
 body {
   background-color: white;
+  overflow: hidden;
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   /* color: #333; */
   /* line-height: 1.6; */
 }
+.page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  /* border: 5px solid black; */
+}
 #first-page {
   background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop)
     no-repeat center center/cover;
-  height: 100vh;
-  width: 100%;
-  /* border: 5px solid black; */
 }
 
 ul {
@@ -364,4 +381,426 @@ main {
 }
 .captions__text.caption-speed {
   padding-right: 30px;
+}
+.side-menu {
+  float: left;
+  position: absolute;
+  top: 40.3vh;
+  z-index: 10;
+}
+
+.showcase {
+  list-style-type: none;
+  font-size: 17px;
+}
+.showcase__item {
+  margin: 0px;
+  padding: 1.4px 4.5px 7.5px 4.5px;
+}
+
+.side-menu__link {
+  width: 14px;
+  margin-top: 9px;
+  margin-left: 2px;
+  padding-left: 7px;
+  padding-right: 11px;
+}
+
+.showcase__item-indicator {
+  width: 100%;
+  padding-bottom: 4.5px;
+  border-right: 1px solid #fff;
+  background-color: #fff;
+  opacity: 0.25;
+}
+
+.showcase__item-label {
+  visibility: hidden;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.side-menu__link:hover + .showcase__item-label {
+  visibility: visible;
+  transition: all 2s 0.2s;
+  z-index: 10;
+}
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+.arrow__link {
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+}
+.arrow--up {
+  transform: rotate(225deg);
+  width: 12px;
+  height: 12px;
+}
+.arrow--down {
+  transform: rotate(45deg);
+}
+
+.arrow--light {
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.arrow--dark {
+  border-right: 2px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+#first-page footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  width: 100%;
+}
+.showcase__item--light {
+  color: #fff;
+}
+
+.showcase__item--dark {
+  color: #000;
+}
+
+.showcase__item-indicator--active-light {
+  border-left: 2px solid #fff;
+  opacity: 1;
+}
+
+.showcase__item-indicator--active-dark {
+  border-left: 3px solid #000;
+  opacity: 1;
+}
+
+.showcase__item-indicator--inactive-light {
+  border-left: 1px thin #fff;
+  opacity: 0.25;
+}
+
+.showcase__item-indicator--inactive-dark {
+  border-left: 1px solid #000;
+  opacity: 0.25;
+}
+
+.showcase__item-indicator--active,
+.showcase__item-label--active {
+  visibility: visible;
+}
+#second-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.second-page .right-panel {
+  background-color: white;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.second-page .left-panel {
+  background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/ea753653-02a2-4206-aac5-82a33a0a245d/bvlatuR/std/2880x1800/model-3-hero-a-desktop)
+    no-repeat center center/cover;
+  background-size: 81.5vw 88vh;
+  /* width: calc(100% - 416px); */
+  flex-grow: 1;
+}
+.right-panel .safety-text {
+  margin: 0 40px;
+  padding-top: 48px;
+}
+.safety-text > p {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #393c41;
+  letter-spacing: 0;
+  padding-bottom: 20px;
+}
+.safety-text > p > a {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #171a20;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* text-decoration: underline; */
+  border-bottom: 1px solid #171a20;
+}
+.safety-text > h2 {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #171a20;
+  letter-spacing: -0.4px;
+}
+.safety-text > h1 {
+  margin: 0;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  color: #171a20;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+.safety-text > h3 {
+  margin: 0;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #171a20;
+  letter-spacing: 0px;
+  /* margin-bottom: 25px; */
+}
+.second-page-buttons {
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.second-order > a {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  border: 3px solid black;
+  color: black;
+  padding: 9.5px 48.5px;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.second-order > a:hover {
+  background-color: black;
+  color: white;
+}
+.learn-more-plus {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 7px 9px;
+  border: 3px solid black;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+.learn-more-plus:hover {
+  background-color: black;
+  color: white;
+}
+.learn-more-text {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* margin: 0 10px; */
+}
+/* .previous-page {
+  position: absolute;
+  top: 0;
+
+  padding-bottom: 5px;
+  width: 100%;
+} */
+.previous-page {
+  position: absolute;
+  right: 0;
+  padding: 26px 30px;
+}
+.previous-page__link {
+  padding: 30px;
+}
+.side-menu-second {
+  float: left;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  /* height: 500px; */
+  top: 40.3vh;
+  z-index: 10;
+}
+#third-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.third-page .bottom-panel {
+  background-color: white;
+  height: 220.033px;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+}
+.bottom-panel {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.bottom-panel .right-section {
+  margin-top: 40px;
+  margin-left: 87.5px;
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #393c41;
+  max-width: 668px;
+}
+.third-page-left-section-text > h1,
+.third-page-left-section-text > h4 {
+  margin: 0;
+  padding: 0;
+}
+.bottom-panel .left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 20px; */
+}
+.third-page-buttons {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 57px;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-page-left-section-text > h4 {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #171a20;
+  letter-spacing: -0.4px;
+}
+.third-page-left-section-text > h1 {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  color: #171a20;
+  letter-spacing: -0.5px;
+}
+.third-page-left-section-text {
+  margin-top: 40px;
+}
+
+.third-page-buttons > .second-order a {
+  padding: 9.5px 56px;
+}
+.learn-more-plus-2 {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 0px;
+  padding: 17px 8px;
+  border: 3px solid black;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+.learn-more-plus-2:hover {
+  background-color: black;
+  color: white;
+}
+.third-page .top-panel {
+  background: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/3489a82e-b19c-457a-86a4-7ea9ac91aa1c/bvlatuR/std/1920x1080/lhd-performance-hero-desktop)
+    no-repeat center center/cover;
+  /* background-size: 81.5vw 88vh; */
+  /* width: calc(100% - 416px); */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+  flex-grow: 1;
+  padding-bottom: 64px;
+}
+
+.element {
+  width: 272px;
+  height: 90px;
+}
+.element .top-text {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: white;
+  text-align: center;
+  padding-bottom: 9px;
+  letter-spacing: -0.5px;
+  /* height: 28px; */
+}
+.element .bottom-text {
+  font-family: "Gotham SSm", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+}
+.mph {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  padding-left: 4px;
+}
+.side-menu-third {
+  float: left;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  /* height: 500px; */
+  top: 40.3vh;
+  z-index: 10;
 }
