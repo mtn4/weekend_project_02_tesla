@@ -216,13 +216,12 @@ ul.main {
 }
 
 ul a {
-  transition: all 0.1s;
+  transition: all 0.5s ease-in-out;
   padding: 8px 10px;
 }
 ul a:hover {
   background-color: rgba(130, 130, 140, 0.5);
-  border: 1px solid transparent;
-  border-radius: 30%;
+  border-radius: 25%;
 }
 main {
   display: flex;
@@ -465,6 +464,25 @@ main {
   align-items: center;
   padding-bottom: 5px;
   width: 100%;
+  animation: animate1 1.8s infinite;
+  animation-delay: 2s;
+}
+@keyframes animate1 {
+  25% {
+    padding-bottom: 0px;
+  }
+  35% {
+    padding-bottom: 5px;
+  }
+  45% {
+    padding-bottom: 3px;
+  }
+  60% {
+    padding-bottom: 5px;
+  }
+  100% {
+    padding-bottom: 5px;
+  }
 }
 .showcase__item--light {
   color: #fff;
@@ -795,6 +813,16 @@ main {
   letter-spacing: -0.6px;
   padding-left: 4px;
 }
+.s {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  padding-left: 9px;
+}
+.one {
+  padding-left: 5px;
+}
 .side-menu-third {
   float: left;
   position: absolute;
@@ -803,4 +831,33 @@ main {
   /* height: 500px; */
   top: 40.3vh;
   z-index: 10;
+}
+.showcase__item-label--active-light {
+  animation: animate2 linear 3.5s;
+}
+@keyframes animate2 {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#lower-part {
+  /* opacity: 0.5; */
+  animation: animate3 linear 2s;
+}
+@keyframes animate3 {
+  0% {
+    opacity: 0;
+    padding-bottom: 40px;
+  }
+  100% {
+    opacity: 1;
+    padding-bottom: 82px;
+  }
 }
